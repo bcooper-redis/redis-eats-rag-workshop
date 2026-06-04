@@ -329,13 +329,28 @@ Run through this the day before the session:
 
 ## Troubleshooting Colab-Specific Issues
 
-### "Repository not found" when cloning in cell 1
+### "❌ git clone failed" in cell 1
 
-The repo URL in the notebook is still the placeholder. Run `scripts/update_repo_url.py` with your GitHub username (Step 2) and push again.
+Cell 1 now uses `subprocess.run()` to capture the full git error and prints it directly. The three most common causes:
 
-### "File not found: data/pdfs" after cell 1 runs
+| Printed message | Cause | Fix |
+|---|---|---|
+| `repository 'https://github.com/your-org/...' not found` | Repo URL is still the placeholder | Run `python3 scripts/update_repo_url.py https://github.com/YOUR-USERNAME/redis-eats-rag-workshop`, then `git push` |
+| `Repository not found` or `403` | Repo is private | GitHub → repo Settings → Danger Zone → Change visibility → Public |
+| No output / timeout | No internet in Colab runtime | Runtime → Disconnect and delete runtime → Reconnect |
 
-The clone succeeded but the working directory is wrong. Check that cell 1 includes `os.chdir('/content/redis-eats-rag-workshop')` after the clone. Re-run cell 1.
+### "❌ No PDFs found in data/pdfs/" after cell 1 runs
+
+The clone succeeded but the `data/pdfs/` folder is empty or missing from GitHub. This happens when the PDFs were not committed before pushing. Fix:
+
+```bash
+cd /Users/brian.cooper/Documents/ClaudeApps/handsOnWorkshop/redis-eats-rag-workshop
+git add data/pdfs/
+git commit -m "Add policy PDFs"
+git push
+```
+
+Then reopen the Colab link and re-run cell 1.
 
 ### Colab disconnects during the embedding step
 
