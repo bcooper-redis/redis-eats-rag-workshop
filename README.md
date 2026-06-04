@@ -61,7 +61,7 @@ No local Python installation is required if you use Google Colab.
 
 1. Open the notebook in Colab:
 
-   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/testuser/redis-eats-rag-workshop/blob/main/notebooks/redis_eats_rag_workshop.ipynb)
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bcooper-redis/redis-eats-rag-workshop/blob/main/notebooks/redis_eats_rag_workshop.ipynb)
 
 2. Run **cell 1** (the Colab setup cell) to clone the repo and make the data files available
 3. Run cells top to bottom
@@ -70,7 +70,7 @@ No local Python installation is required if you use Google Colab.
 ### Option 2 — Local (VS Code or Jupyter)
 
 ```bash
-git clone https://github.com/testuser/redis-eats-rag-workshop
+git clone https://github.com/bcooper-redis/redis-eats-rag-workshop
 cd redis-eats-rag-workshop
 pip install -r requirements.txt
 # Open notebooks/redis_eats_rag_workshop.ipynb in VS Code or Jupyter
