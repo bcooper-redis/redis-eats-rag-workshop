@@ -1,0 +1,19 @@
+# Redis Eats RAG Workshop — Python dependencies
+# Install with: pip install -r requirements.txt
+
+# Redis
+redis>=5.0.0
+redisvl>=0.3.0
+
+# LangCache (Redis semantic caching — preview)
+langcache>=0.1.0
+
+# OpenAI
+openai>=1.30.0
+
+# PDF parsing
+pypdf>=4.0.0
+
+# Utilities
+python-dotenv>=1.0.0
+tqdm>=4.66.0
