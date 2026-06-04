@@ -17,3 +17,6 @@ pypdf>=4.0.0
 # Utilities
 python-dotenv>=1.0.0
 tqdm>=4.66.0
+
+# Sentence Transformers — used by RedisVL SemanticRouter for route embeddings
+sentence-transformers>=2.2.0
