@@ -3,7 +3,7 @@
 
 # Redis
 redis>=5.0.0
-redisvl>=0.3.0
+redisvl>=0.20.0
 
 # LangCache (Redis semantic caching — preview)
 langcache>=0.1.0
