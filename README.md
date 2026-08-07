@@ -47,8 +47,11 @@ Complete these **before** the workshop:
 
 ### 3 — LangCache Instance *(for Section 10 only)*
 
-- LangCache is available in preview on Redis Cloud
-- See [LangCache documentation](https://redis.io/docs/latest/develop/ai/langcache/) for setup
+- Provision in Redis Cloud: left sidebar → **AI Services** → **LangCache** → **New Service**
+- When the wizard asks for an **Embedding Provider**, the default Redis-managed model
+  (`langcache-embedding-model-v3`) works for this workshop — no OpenAI key needed for the cache
+- Save the **URL**, **Cache ID**, and **API key**
+- See [LangCache documentation](https://redis.io/docs/latest/develop/ai/langcache/) for details
 - The notebook runs without LangCache — Section 10 degrades gracefully if credentials are not provided
 
 No local Python installation is required if you use Google Colab.
